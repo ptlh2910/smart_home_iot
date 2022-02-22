@@ -22,7 +22,7 @@ Triển khai trên cloud (AWS)
 - Test api trên postman thông qua địa chỉ localhost:4000
 
 3, Chạy giao diện web (được xây dựng bằng ReactJS):
-- Mở terminal tới thư mục IoT-Group13/web_client/frontend
+- Mở terminal tới thư mục IoT-Group12/web_client/frontend
 - Tải các thư viện cần thiết cho frontend: npm i
 - Khởi chạy giao diện: npm start
 - Chờ đến khi hiển thị trên trình duyệt ở địa chỉ localhost:3000
