@@ -320,7 +320,7 @@ function DetailRoom(props) {
                 )}
               </div>
             </Col>
-            <Col span={8} style={{ position: "relative" }}>
+            <Col span={8} style={{ position: "relative" } }>
               {/* <Card
                                 hoverable
                                 // cover={<FaTemperatureLow size={50} />}
@@ -331,6 +331,7 @@ function DetailRoom(props) {
                 ""
               ) : (
                 <Pie
+                  color="#0041ff"
                   percent={temperature}
                   subTitle="T°"
                   // total="28°C"

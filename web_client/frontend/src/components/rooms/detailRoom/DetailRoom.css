@@ -1,3 +1,6 @@
+.body{
+    background-color: rgb(255, 255, 255);
+}
 .detail-room .ant-card{
     width: 92%;
     height: 100px;
@@ -103,11 +106,12 @@
 }
 
 .info-room{
-    box-shadow: 0 0.0625rem 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.0625rem 20px 0 rgb(0, 0, 0);
     margin-top: 15px;
     margin-left: 15px;
     border-radius: 15px;
     height: 400px;
+    background: #fff;
 }
 .lock{
     display: flex;

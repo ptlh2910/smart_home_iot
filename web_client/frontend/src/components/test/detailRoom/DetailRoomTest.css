@@ -109,7 +109,9 @@
 }
 .antd-pro-charts-pie-pie .antd-pro-charts-pie-total > h4 {
   height: 10px;
+  color: #fff;
 }
+
 
 .info-room {
   box-shadow: 0 0.0625rem 20px 0 rgba(0, 0, 0, 0.2);

@@ -135,7 +135,7 @@ function Menus(props) {
             {children}
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>DDH - IoT ứng dụng</Footer>
+        <Footer style={{ textAlign: "center" }}>Group12</Footer>
       </Layout>
     </Layout>
   );
