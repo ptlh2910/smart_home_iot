@@ -9,8 +9,6 @@ npm start
 
 # Xem các cấu hình ở .env
 
-# Kiểm thử api ở thư mục test-api thông qua Rest Client extensions của VSCode
-
 # api sensor
 Đầu vào:\
     - Cho chọn tháng ngày giờ phút bắt đầu và kết thúc\

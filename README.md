@@ -1,18 +1,8 @@
 # Hướng dẫn
-# Link youtube: https://youtu.be/QngkPkrkfgA
  Cài đặt thư viện:
 - ESP8266
 - PubSubClient
 - ArduinoJson: bản 5.
-
-Topic
-- Gửi nhận dữ liệu
-- Điều khiển hẹn từ mobile tới esp
-- Điều khiển bật tắt đèn từ mobile tới esp
-- gửi trạng thái sensor từ esp tới mobile
-
-Chức năng điều khiển
-- bật tắt thiết bị
 
 Triển khai trên cloud (AWS)
 - Create EC2 cloud AWS
@@ -24,7 +14,6 @@ Triển khai trên cloud (AWS)
 - Trong thư mục IoT-Group11/server mở file .env
 - Trong đó có các hằng số:
 	- PORT=4000     <cổng khởi chạy cho server>
-	- DATABASE_URL=mongodb+srv://iot:iot11@cluster0.ifgh1.mongodb.net/iot?retryWrites=true&w=majority  <đường dẫn tới database>
 
 2, Khởi chạy server (NodeJS):
 - Mở terminal tới thư mục IoT-Group13/server
