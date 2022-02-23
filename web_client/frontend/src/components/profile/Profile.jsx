@@ -1,148 +1,197 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import { UserOutlined } from "@ant-design/icons";
-import { Row } from "antd";
-import UserData from "database/user.js";
-import { useState } from "react";
-import { useEffect } from "react";
-
-const imgProfile = `${process.env.PUBLIC_URL}image/img_profile.jpg`;
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 900,
-    minWidth: 700,
-  },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
-}));
-
-const getUser = () => {
-  let userId = localStorage.getItem("userId");
-
-  UserData.map((user, index) => {
-    if (user.id === userId) {
-      console.log("user" + user);
-      return JSON.stringify(user);
-    }
-  });
-};
-
-function Profile(props) {
-  const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-  const [user, setUser] = useState();
-  useEffect(() => {
-    let userId = localStorage.getItem("userId");
-
-    UserData.map((user, index) => {
-      if (user.id === userId) {
-        setUser(user);
-        console.log("user: ", user);
-        // return JSON.stringify(user);
-      }
-    });
-  }, []);
-  // console.log('user '+user)
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-  return user === undefined ? (
-    ""
-  ) : (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={<Avatar size="large" icon={<UserOutlined />} />}
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title={user.username}
-            subheader="My house"
+import { Segment, Grid, Header, Divider, Image, Icon } from "semantic-ui-react";
+import "./Profile.css"
+class Profile extends React.Component {
+  render() {
+    return (
+      <Grid container textAlign="center" style={{ marginTop: "50px" }}>
+        <Icon name="chevron left">BACK</Icon>
+        <Segment
+          style={{ minWidth: "1000px", minHeight: "500px", width: "1000px" }}
+          textAlign="left"
+        >
+          <Image
+            className="profile-image"
+            src="https://image.freepik.com/free-vector/abstract-logo-with-colorful-leaves_1025-695.jpg"
+            circular
+            size="small"
           />
-          <CardMedia
-            className={classes.media}
-            image={imgProfile}
-            title="Paella dish"
-          />
-          <CardContent>
-            <Typography variant="body1" color="textSecondary" component="div">
-              <Row>Account ID: {user.id}</Row>
-              <Row>Email: {user.email}</Row>
-              <Row>Phone: {user.phone}</Row>
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            {/* <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton> */}
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph>Profile:</Typography>
-              <Typography paragraph>
-                This is website for smart house.
-              </Typography>
-              <Typography paragraph>Detail profile</Typography>
-            </CardContent>
-          </Collapse>
-        </Card>
-      </div>
-    </div>
-  );
+          <Header as="h1" textAlign="center" floated="left">
+            SMART HOME GROUP12
+          </Header>
+          <Grid container columns={2}>
+            <Grid.Column>
+              <Grid container>
+                <Grid.Row columns={2}>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h4" color="orange">
+                      YOUR NAME
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <b>Tran Van Phuc</b>
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={2}>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h4" color="orange">
+                      {" "}
+                      EMAIL
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <b>phuc@gmail.com</b>
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={2}>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h4" color="orange">
+                      {" "}
+                      MEMBER 1
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column />
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Name:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <b>Hang PTL</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Email:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>hang@gmail.com</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Phone:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>(541) 754-3010</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Password:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>*************</b>
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={2}>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h4" color="orange">
+                      {" "}
+                      MEMBER 2
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column />
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Name:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>Minh Anh</b>
+                  </Grid.Column>
+
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Email:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>MA@gmail.com</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Phone:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>(541) 754-3010</b>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Grid.Column>
+            <Grid.Column>
+              <Grid container>
+                <Grid.Row columns={1}>
+                  <Grid.Column>
+                    <Header as="h4" color="orange">
+                      ABOUT YOUR HOUSE
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "justified" }}>
+                    <b>
+                      Amazon.com, Inc., doing business as Amazon, is an American
+                      electronic commerce and cloud computing company based in
+                      Seattle, Washington that was founded by Jeff Bezos on July
+                      5, 1994.
+                    </b>
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={1}>
+                  <Grid.Column>
+                    <Header as="h4" color="orange">
+                      ADDRESS
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "justified" }}>
+                    <b>
+                      Amazon.com, Inc., doing business as Amazon, is an American
+                      electronic commerce and cloud computing company based in
+                      Seattle, Washington that was founded by Jeff Bezos on July
+                      5, 1994.
+                    </b>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Grid.Column>
+          </Grid>
+          <Divider className="api-divider" />
+          <Grid container>
+            <Grid.Row columns={4}>
+              <Grid.Column style={{ textAlign: "right" }}>
+                <Header as="h4" color="orange">
+                  {" "}
+                  CLIENT ID
+                </Header>
+              </Grid.Column>
+              <Grid.Column>***********************</Grid.Column>
+              <Grid.Column>
+                <Header
+                  as="h4"
+                  color="orange"
+                  width={1}
+                  style={{ textAlign: "right" }}
+                >
+                  {" "}
+                  CLIENT SECRET
+                </Header>
+              </Grid.Column>
+              <Grid.Column style={{ textAlign: "left" }}>
+                ***********************
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
+      </Grid>
+    );
+  }
 }
-
 export default Profile;
+

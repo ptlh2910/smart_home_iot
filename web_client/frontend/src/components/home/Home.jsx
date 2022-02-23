@@ -33,6 +33,7 @@ function Home(props) {
           <Row style={{marginBottom: "15px"}}>
             <CardAntd
               hoverable
+              style={{ height: "370px"}}
             //   style={{ width: "540px", height: "312px", marginBottom: "15px" }}
             >
               <Typography gutterBottom variant="h5" component="p">
@@ -53,7 +54,7 @@ function Home(props) {
           <Row>
             <CardAntd
               hoverable
-              style={{ height: "320px"}}
+              style={{ height: "370px"}}
             >
               <Typography gutterBottom variant="h5" component="p">
                 Smart Home 2:
@@ -76,7 +77,7 @@ function Home(props) {
                 <CardMedia
                   component="img"
                   alt="Image smart home"
-                  height="248"
+                  height="302"
                   image={imgHome}
                   title="Image smart home"
                 />
@@ -100,7 +101,7 @@ function Home(props) {
                 <CardMedia
                   component="img"
                   alt="Image smart home"
-                  height="244"
+                  height="295"
                   image={imgModelHome}
                   title="Modeling of smart home"
                 />

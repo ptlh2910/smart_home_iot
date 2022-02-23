@@ -53,13 +53,13 @@
     height: 100%;
 }
 .carousel-1 {
-    background-image: url('./image/image1.png');
+    background-image: url('./image/image2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: "160px",
 }
 .carousel-2 {
-    background-image: url('./image/image2.jpg');
+    background-image: url('./image/image1.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: "160px",
@@ -112,6 +112,7 @@
     border-radius: 15px;
     height: 400px;
     background: #fff;
+    color: rgb(0, 0, 0);
 }
 .lock{
     display: flex;
@@ -128,10 +129,11 @@
 }
 .title-detail{
     text-align: center;
-    background-color: aqua;
+    background-color: rgb(96, 97, 97);
     border-radius: 15px;
     width: 100px;
     margin-top: 20px;
     width: 92%;
+    color: #fff;
 }
 
