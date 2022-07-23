@@ -5,7 +5,7 @@ class Profile extends React.Component {
   render() {
     return (
       <Grid container textAlign="center" style={{ marginTop: "50px" }}>
-        <Icon name="chevron left">BACK</Icon>
+        
         <Segment
           style={{ minWidth: "1000px", minHeight: "500px", width: "1000px" }}
           textAlign="left"
@@ -16,34 +16,14 @@ class Profile extends React.Component {
             circular
             size="small"
           />
-          <Header as="h1" textAlign="center" floated="left">
-            SMART HOME GROUP12
+          <Header as="h1" textAlign="center" floated="left" color="red" font-weight="bold">
+            SMART HOME GROUP13
           </Header>
           <Grid container columns={2}>
             <Grid.Column>
               <Grid container>
-                <Grid.Row columns={2}>
-                  <Grid.Column style={{ textAlign: "right" }}>
-                    <Header as="h4" color="orange">
-                      YOUR NAME
-                    </Header>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <b>Tran Van Phuc</b>
-                  </Grid.Column>
-                </Grid.Row>
-                <Grid.Row columns={2}>
-                  <Grid.Column style={{ textAlign: "right" }}>
-                    <Header as="h4" color="orange">
-                      {" "}
-                      EMAIL
-                    </Header>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <b>phuc@gmail.com</b>
-                  </Grid.Column>
-                </Grid.Row>
-                <Grid.Row columns={2}>
+	
+			    <Grid.Row columns={2}>
                   <Grid.Column style={{ textAlign: "right" }}>
                     <Header as="h4" color="orange">
                       {" "}
@@ -57,38 +37,35 @@ class Profile extends React.Component {
                       Name:
                     </Header>
                   </Grid.Column>
-                  <Grid.Column>
-                    <b>Hang PTL</b>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>Vũ Quốc Hiển</b>
+                  </Grid.Column>
+
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      MSSV:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>20183735</b>
                   </Grid.Column>
                   <Grid.Column style={{ textAlign: "right" }}>
                     <Header as="h5" style={{ fontStyle: "italic" }}>
                       {" "}
-                      Email:
+                      Lớp:
                     </Header>
                   </Grid.Column>
                   <Grid.Column style={{ paddingBottom: " 1px" }}>
-                    <b>hang@gmail.com</b>
-                  </Grid.Column>
-                  <Grid.Column style={{ textAlign: "right" }}>
-                    <Header as="h5" style={{ fontStyle: "italic" }}>
-                      {" "}
-                      Phone:
-                    </Header>
-                  </Grid.Column>
-                  <Grid.Column style={{ paddingBottom: " 1px" }}>
-                    <b>(541) 754-3010</b>
-                  </Grid.Column>
-                  <Grid.Column style={{ textAlign: "right" }}>
-                    <Header as="h5" style={{ fontStyle: "italic" }}>
-                      {" "}
-                      Password:
-                    </Header>
-                  </Grid.Column>
-                  <Grid.Column style={{ paddingBottom: " 1px" }}>
-                    <b>*************</b>
+                    <b>Kỹ thuật máy tính 02-K63</b>
                   </Grid.Column>
                 </Grid.Row>
-                <Grid.Row columns={2}>
+              </Grid>
+            </Grid.Column>
+            <Grid.Column>
+              <Grid container>
+	
+			    <Grid.Row columns={2}>
                   <Grid.Column style={{ textAlign: "right" }}>
                     <Header as="h4" color="orange">
                       {" "}
@@ -103,26 +80,118 @@ class Profile extends React.Component {
                     </Header>
                   </Grid.Column>
                   <Grid.Column style={{ paddingBottom: " 1px" }}>
-                    <b>Minh Anh</b>
+                    <b>Lê Huy Hoàng</b>
                   </Grid.Column>
 
                   <Grid.Column style={{ textAlign: "right" }}>
                     <Header as="h5" style={{ fontStyle: "italic" }}>
                       {" "}
-                      Email:
+                      MSSV:
                     </Header>
                   </Grid.Column>
                   <Grid.Column style={{ paddingBottom: " 1px" }}>
-                    <b>MA@gmail.com</b>
+                    <b>20183923</b>
                   </Grid.Column>
                   <Grid.Column style={{ textAlign: "right" }}>
                     <Header as="h5" style={{ fontStyle: "italic" }}>
                       {" "}
-                      Phone:
+                      Lớp:
                     </Header>
                   </Grid.Column>
                   <Grid.Column style={{ paddingBottom: " 1px" }}>
-                    <b>(541) 754-3010</b>
+                    <b>Công nghệ thông tin 02-K63</b>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Grid.Column>
+            <Grid.Column>
+              <Grid container>
+	    
+                <Grid.Row columns={2}>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h4" color="orange">
+                      {" "}
+                      MEMBER 3
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column />
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Name:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <b>POUTH LYHEANG</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      MSSV:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>20180279</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Lớp:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>Công nghệ thông tin 03-K63</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                   
+                  </Grid.Column>
+                </Grid.Row>
+				 </Grid>
+            </Grid.Column>
+            <Grid.Column>
+              <Grid container>
+	
+                <Grid.Row columns={2}>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h4" color="orange">
+                      {" "}
+                      MEMBER 4
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column />
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Name:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>Trịnh Hồng Dương</b>
+                  </Grid.Column>
+
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      MSSV:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>20183727</b>
+                  </Grid.Column>
+                  <Grid.Column style={{ textAlign: "right" }}>
+                    <Header as="h5" style={{ fontStyle: "italic" }}>
+                      {" "}
+                      Lớp:
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column style={{ paddingBottom: " 1px" }}>
+                    <b>Kỹ thuật máy tính 03-K63</b>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
