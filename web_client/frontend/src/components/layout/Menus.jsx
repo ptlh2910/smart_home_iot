@@ -74,20 +74,18 @@ function Menus(props) {
           selectedKeys={[keyMenu]}
         >
           <Menu.Item key="/" icon={<HomeOutlined />}>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Trang chủ</NavLink>
           </Menu.Item>
           <Menu.Item key="/rooms" icon={<FileOutlined />}>
-            <NavLink to="/rooms">Rooms</NavLink>
+            <NavLink to="/rooms">Phòng</NavLink>
           </Menu.Item>
           <Menu.Item key="/deveices" icon={<DesktopOutlined />}>
-            <NavLink to="/deveices">Deveices</NavLink>
+            <NavLink to="/deveices">Thiết bị</NavLink>
           </Menu.Item>
           <Menu.Item key="/profile" icon={<UserOutlined />}>
-            <NavLink to="/profile">Profile</NavLink>
+            <NavLink to="/profile">Thông tin nhóm</NavLink>
           </Menu.Item>
-          <Menu.Item key="/test" icon={<SettingOutlined />}>
-            <NavLink to="/test">Test</NavLink>
-          </Menu.Item>
+         
         </Menu>
       </Sider>
       <Layout className="site-layout" style={{}}>
@@ -135,7 +133,9 @@ function Menus(props) {
             {children}
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>Group12</Footer>
+        <Footer style={{ textAlign: "center"}}  style={{ marginLeft: "800px"}} >
+		<b style={{ fontSize: "20px"}} >NHÓM 13</b>
+		</Footer>
       </Layout>
     </Layout>
   );
